@@ -1,0 +1,147 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.01em;
+color: #1b1c21;
+}
+
+body {
+    background: #fff;
+}
+
+.mobile_menu {
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    box-shadow:  16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+/* Шапка меню */
+.header_menu {
+    display: flex;
+    
+    align-items: center;
+    padding-bottom: 10px;
+    
+}
+
+.mobile_menu_icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    }
+
+.mobile_menu_icon.icon_search{
+margin-left: auto;
+
+}
+.mobile_menu_logo{
+    width: 96px;
+    height: 50px;
+    margin-left: 17px;
+    }
+
+
+/* Основное меню */
+.main_mobile_menu {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.main_menu_ull {
+    list-style: none;
+}
+
+.main_menu_li {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: normal;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: relative;
+    margin-bottom: 32px;
+    padding: 0;
+    
+}
+.main_menu_li:hover {
+    opacity: 0.6;
+}
+
+.main_menu_li::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 160%;
+    background-color: #00eaff;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.main_menu_li:hover::before {
+    opacity: 1;
+}
+
+/* Подвал меню */
+.footer_mobile_menu {
+    
+}
+
+.footer_mobile_menu_icon {
+    display: flex;
+    
+    align-items: center;
+    gap: 16px;
+}
+
+.footer_mobile_menu_icon .mobile_menu_icon img {
+    width: 40px;
+    height: 40px;
+   }
+
+.footer_mobile_menu_icon .mobile_menu_icon img:hover {
+    filter: brightness(1.2);
+}
+
+.mobile_menu_mail,
+.mobile_menu_phone,
+.mobile_menu_lang {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.mobile_menu_mail{
+font-weight: 500;
+}
+.mobile_menu_phone{
+    font-weight: 700;
+    font-size: 24px;
+}
+.mobile_menu_lang{
+margin-top: 30px; 
+width: 87px;
+height: 24px;
+}
+.mobile_menu_lang span.active {
+    color: #7D7D7D; /* Серый цвет */
+    
+}
